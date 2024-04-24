@@ -3,17 +3,18 @@ public class Cart {
 	private DigitalVideoDisc itemOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
 	private int qtyOrdered = 0;
 
-	public void addDigitalVideoDisc(DigitalVideoDisc disc){
+	public boolean addDigitalVideoDisc(DigitalVideoDisc disc){
 		if (qtyOrdered >= MAX_NUMBERS_ORDERED){
 			System.out.println("Cart is out of space!");
+			return false;
 		}
-		else{
-			itemOrdered[qtyOrdered] = disc;
-			qtyOrdered++;
-		}
+
+		itemOrdered[qtyOrdered] = disc;
+		qtyOrdered++;
+		return true;
 	}
 
-	public void removeDigitalVideoDisc(DigitalVideoDisc disc){
+	public boolean removeDigitalVideoDisc(DigitalVideoDisc disc){
 		int removeidx = -1;
 
 		for (int i = 0; i < qtyOrdered; i++){
@@ -25,17 +26,18 @@ public class Cart {
 
 		if (removeidx == -1){
 			System.out.println("Cannot find disc");
+			return false;
 		}
 
-		else{
-			qtyOrdered--;
+		qtyOrdered--;
 
-			for (int i = removeidx; i < qtyOrdered; i++){
-				itemOrdered[i] = itemOrdered[i+1];
-			}
-
-			System.out.println("Removed at index " + removeidx);
+		for (int i = removeidx; i < qtyOrdered; i++){
+			itemOrdered[i] = itemOrdered[i+1];
 		}
+
+		System.out.println("Removed at index " + removeidx);
+
+		return true;
 
 
 	}
