@@ -18,14 +18,6 @@ public class DigitalVideoDisc {
 
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost){this(title, category, director, cost); this.length = length;}
 
-	public void DeepCopy(DigitalVideoDisc other){
-		this.title = other.title;
-		this.category = other.category;
-		this.director = other.director;
-		this.length = other.length;
-		this.cost = other.cost;
-	}
-
 	public void setTitle(String title){
 		this.title = title;
 	}
