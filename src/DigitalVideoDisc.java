@@ -18,6 +18,10 @@ public class DigitalVideoDisc {
 
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost){this(title, category, director, cost); this.length = length;}
 
+	public void setTitle(String title){
+		this.title = title;
+	}
+
 	public String getTitle(){
 		return title;
 	}
