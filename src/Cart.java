@@ -29,7 +29,7 @@ public class Cart {
 		return true;
 	}
 
-	public boolean addDigitalVideoDisc(DigitalVideoDisc[] disc){
+	public boolean addDigitalVideoDisc(DigitalVideoDisc... disc){
 		for (DigitalVideoDisc d : disc){
 			boolean check = addDigitalVideoDisc(d);
 			if (!check){
