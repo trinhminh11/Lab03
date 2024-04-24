@@ -5,7 +5,8 @@ public class TestPassingParameter {
 		DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
 		DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
 
-		swap(jungleDVD, cinderellaDVD);
+
+		TrueSwap(jungleDVD, cinderellaDVD);
 		System.out.println("jungle dvd title " + jungleDVD.getTitle());
 		System.out.println("cinderella dvd title " + cinderellaDVD.getTitle());
 
@@ -18,6 +19,12 @@ public class TestPassingParameter {
 		Object tmp = o1;
 		o1 = o2;
 		o2 = tmp;
+	}
+
+	public static void TrueSwap(DigitalVideoDisc d1, DigitalVideoDisc d2){
+		DigitalVideoDisc tmp = d1;
+		d1.DeepCopy(d2);
+		d2.DeepCopy(tmp);
 	}
 
 	public static void changeTitle(DigitalVideoDisc dvd, String tile){
