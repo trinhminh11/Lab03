@@ -14,6 +14,31 @@ public class Cart {
 		return true;
 	}
 
+	public boolean addDigitalVideoDisc(DigitalVideoDisc disc1, DigitalVideoDisc disc2){
+		boolean check = addDigitalVideoDisc(disc1);
+		if (!check){
+			return false;
+		}
+
+		check = addDigitalVideoDisc(disc1);
+
+		if (!check){
+			return false;
+		}
+
+		return true;
+	}
+
+	public boolean addDigitalVideoDisc(DigitalVideoDisc[] disc){
+		for (DigitalVideoDisc d : disc){
+			boolean check = addDigitalVideoDisc(d);
+			if (!check){
+				return false;
+			}
+		}
+		return true;
+	}
+
 	public boolean removeDigitalVideoDisc(DigitalVideoDisc disc){
 		int removeidx = -1;
 
