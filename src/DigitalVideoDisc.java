@@ -11,7 +11,7 @@ public class DigitalVideoDisc {
 
 	public DigitalVideoDisc(){}
 
-	public DigitalVideoDisc(String title){this.title = title; id = nbDigitalVideoDiscs; nbDigitalVideoDiscs++;}
+	public DigitalVideoDisc(String title){this.title = title; nbDigitalVideoDiscs++; id = nbDigitalVideoDiscs; }
 	
 	public DigitalVideoDisc(String title, String category, float cost){this(title); this.category = category; this.cost = cost;}
 	
@@ -21,6 +21,14 @@ public class DigitalVideoDisc {
 
 	public int getID(){
 		return id;
+	}
+	
+	public void deepCopy(DigitalVideoDisc other){
+		this.title = other.title;
+		this.category = other.category;
+		this.director = other.director;
+		this.length = other.length;
+		this.cost = other.cost;
 	}
 
 	public void setTitle(String title){
