@@ -22,6 +22,14 @@ public class DigitalVideoDisc {
 	public int getID(){
 		return id;
 	}
+	
+	public void deepCopy(DigitalVideoDisc other){
+		this.title = other.title;
+		this.category = other.category;
+		this.director = other.director;
+		this.length = other.length;
+		this.cost = other.cost;
+	}
 
 	public void setTitle(String title){
 		this.title = title;
