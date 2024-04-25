@@ -31,6 +31,14 @@ public class DigitalVideoDisc {
 		this.cost = other.cost;
 	}
 
+	public boolean isMatch(String title){
+		return (this.title == title);
+	}
+
+	public boolean isMatch(int id){
+		return (this.id == id);
+	}
+
 	public void setTitle(String title){
 		this.title = title;
 	}
@@ -53,5 +61,9 @@ public class DigitalVideoDisc {
 
 	public float getCost(){
 		return cost;
+	}
+
+	public String toString(){
+		return "" + getID() + "-[" + getTitle()+"]-["+getCategory()+"]-["+getDirector()+"]-["+getLength()+"]: "+getCost()+"$";
 	}
 }
