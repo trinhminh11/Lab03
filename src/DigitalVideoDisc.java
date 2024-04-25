@@ -31,10 +31,6 @@ public class DigitalVideoDisc {
 		this.cost = other.cost;
 	}
 
-	public boolean isMatch(String title){
-		return (this.title == title);
-	}
-
 	public void setTitle(String title){
 		this.title = title;
 	}
