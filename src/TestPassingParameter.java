@@ -52,6 +52,12 @@ public class TestPassingParameter {
 		o2 = tmp;
 	}
 
+	public static void swap(DigitalVideoDisc d1, DigitalVideoDisc d2){
+		DigitalVideoDisc temp = d1;
+		d1.deepCopy(d2);
+		d2.deepCopy(temp);
+	}
+
 
 	public static void changeTitle(DigitalVideoDisc dvd, String tile){
 		String oldTitle = dvd.getTitle();
