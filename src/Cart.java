@@ -75,6 +75,25 @@ public class Cart {
 
 		return res;
 	}
+	
+	public String toString(){
+		String res = "";
+
+		res += "*****************************CART*****************************\n";
+		for (int i = 0; i <= qtyOrdered; i++){
+			DigitalVideoDisc current = itemOrdered[i];
+			res += "" + (i+1) + "-[" + current.getTitle()+"]-["+current.getCategory()+"]-["+current.getDirector()+"]-["+current.getLength()+"]: "+current.getCost()+"$\n";
+		}
+
+		res += "Total cost: " + totalCost() + "\n";
+		res += "**************************************************************";
+
+		return res;
+	}
+
+	public void print(){
+		System.out.println(toString());
+	}
 
 }
 
