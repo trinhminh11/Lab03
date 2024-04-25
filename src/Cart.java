@@ -75,18 +75,6 @@ public class Cart {
 
 		return res;
 	}
-
-
-	public void SearchDVD(int id){
-		for (int i = 0; i < qtyOrdered; i++){
-			if (itemOrdered[i].isMatch(id)){
-				System.out.println(itemOrdered[i].toString());
-				return;
-			}
-		}
-
-		System.out.println("No Match found");
-	}
 	
 	public String toString(){
 		String res = "";
