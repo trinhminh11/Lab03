@@ -82,7 +82,7 @@ public class Cart {
 		res += "*****************************CART*****************************\n";
 		for (int i = 0; i <= qtyOrdered; i++){
 			DigitalVideoDisc current = itemOrdered[i];
-			res += "" + (i+1) + "-[" + current.getTitle()+"]-["+current.getCategory()+"]-["+current.getDirector()+"]-["+current.getLength()+"]: "+current.getCost()+"$\n";
+			res += "" + current.getID() + "-[" + current.getTitle()+"]-["+current.getCategory()+"]-["+current.getDirector()+"]-["+current.getLength()+"]: "+current.getCost()+"$\n";
 		}
 
 		res += "Total cost: " + totalCost() + "\n";
