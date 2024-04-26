@@ -20,4 +20,4 @@ class Aims {
 		
 		anOrder.print();
 	}
-}
+}	
