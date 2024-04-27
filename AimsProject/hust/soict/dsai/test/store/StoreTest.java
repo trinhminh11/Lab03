@@ -15,6 +15,5 @@ public class StoreTest {
 		store.addDVD(dvd3);
 
 		store.removeDVD(dvd3);
-
 	}
 }
