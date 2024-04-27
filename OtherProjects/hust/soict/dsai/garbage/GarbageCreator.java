@@ -13,7 +13,7 @@ public class GarbageCreator {
 			Scanner reader = new Scanner(f);
 
 			while (reader.hasNextLine()){
-				data += reader.nextLine();
+				data += reader.nextLine() + "\n";
 			}
 
 			reader.close();
